@@ -3,39 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>모아지갑 개인정보처리방침 — 검토용 초안</title>
+  <meta name="color-scheme" content="light">
+  <title>모아지갑 개인정보처리방침</title>
   <style>
     :root { color-scheme: light; }
-    body { font-family: system-ui, -apple-system, 'Noto Sans KR', sans-serif; margin: 0; color: #19364e; background: #f5f8fb; line-height: 1.8; }
-    main { max-width: 780px; margin: 40px auto; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 4px 20px #18334b12; }
-    h1 { line-height: 1.35; font-size: 1.8rem; } h2 { margin-top: 2rem; font-size: 1.15rem; border-bottom: 1px solid #e3eaf0; padding-bottom: .4rem; }
-    .notice { border-left: 4px solid #d97706; padding: 12px 16px; background: #fff7ed; color: #713f12; }
-    a { color: #1d5f9e; } footer { margin-top: 3rem; color: #64748b; font-size: .9rem; }
-    @media(max-width: 850px) { main { margin: 0; padding: 24px 18px; border-radius: 0; } }
+    body {
+      font-family: system-ui, -apple-system, 'Noto Sans KR', sans-serif;
+      margin: 0;
+      color: #19364e;
+      background: #f5f8fb;
+      line-height: 1.8;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    main {
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 32px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px #18334b12;
+    }
+    h1 { line-height: 1.35; font-size: 1.8rem; }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.15rem;
+      border-bottom: 1px solid #e3eaf0;
+      padding-bottom: .4rem;
+    }
+    p { margin: 1rem 0; }
+    ul { padding-left: 1.4rem; }
+    li { margin: .25rem 0; }
+    a { color: #1d5f9e; }
+    footer { margin-top: 3rem; color: #64748b; font-size: .9rem; }
+    @media (max-width: 850px) {
+      main { margin: 0; padding: 24px 18px; border-radius: 0; box-shadow: none; }
+      h1 { font-size: 1.6rem; }
+    }
   </style>
 </head>
-<body><main>
-  <h1>모아지갑 개인정보처리방침</h1>
-  <p class="notice"><strong>검토용 초안 — 게시 전 확인 필요</strong><br>본 문서는 출시 준비를 위한 초안입니다. 알림 데이터 삭제 및 Android 자동 백업 정책 등 출시 전 수정 사항을 반영한 후 최종 확정해야 합니다.</p>
-  <p><strong>운영자:</strong> yudae studio<br><strong>문의:</strong> <a href="mailto:yudae.studio@gmail.com">yudae.studio@gmail.com</a><br><strong>시행일:</strong> 출시 전 확정 예정</p>
-  <h2>1. 처리하는 정보 및 목적</h2>
-  <p>모아지갑은 쿠폰과 유효기간을 관리하기 위해 이용자가 등록한 쿠폰 내용, 쿠폰번호, 바코드·QR 정보, 유효기간, 사용 상태, 이미지 및 이미지 분석 결과를 처리합니다. 회원가입과 로그인 기능은 제공하지 않습니다.</p>
-  <h2>2. 기기 내 저장 및 이미지 분석</h2>
-  <p>쿠폰 정보와 이미지는 주로 이용자 기기의 앱 내부 저장소에 보관됩니다. 이미지의 문자·바코드·QR 인식에는 Google ML Kit를 사용합니다. 입력 이미지와 인식 결과는 기기에서 처리되며, SDK의 진단·사용 통계 및 기기·앱 관련 정보가 Google에 전송될 수 있습니다.</p>
-  <h2>3. 알림 접근 서비스</h2>
-  <p>이용자가 Android 설정에서 알림 접근을 별도로 허용하면 카카오톡, 삼성 메시지, Google 메시지의 알림 제목·본문 및 이미지 관련 정보를 쿠폰 후보 확인 목적으로 읽을 수 있습니다. 현재 구현에서는 쿠폰과 관련 없는 알림 정보도 기기 내부 기록에 남을 수 있으며, 일부 알림 정보가 진단 로그에 출력될 가능성이 있어 출시 전 개선할 예정입니다. 이용자는 Android 설정에서 권한을 철회할 수 있습니다.</p>
-  <h2>4. 유효기간 알림</h2>
-  <p>이용자가 허용한 경우 유효기간 안내를 위한 Android 알림을 예약할 수 있습니다. 기기 설정이나 권한 상태에 따라 알림이 지연되거나 표시되지 않을 수 있습니다.</p>
-  <h2>5. 백업 및 복원</h2>
-  <p>이용자가 수동 백업을 선택하면 쿠폰 정보와 이미지가 포함된 JSON 파일이 생성되어 이용자가 선택한 위치에 저장됩니다. JSON 파일의 이미지 Base64 인코딩은 암호화가 아닙니다. 외부 클라우드 저장 위치를 선택한 경우 해당 서비스의 정책이 적용될 수 있습니다. Android 자동 백업은 출시 버전에서 비활성화할 예정이며, 실제 적용 여부를 출시 전에 검증합니다.</p>
-  <h2>6. 캘린더 연동</h2>
-  <p>이용자가 직접 캘린더 추가를 선택하고 권한을 허용하면 쿠폰 내용과 날짜가 Android 캘린더에 기록됩니다. 연결된 캘린더 계정의 동기화 설정에 따라 외부 서비스에 저장될 수 있습니다.</p>
-  <h2>7. 보관 및 삭제</h2>
-  <p>이용자는 앱에서 쿠폰 및 이미지를 삭제할 수 있습니다. 현재 전체 데이터 삭제 기능으로 알림 기록·알림 이미지, 별도 백업 파일, 외부 캘린더 일정이 모두 삭제되지는 않을 수 있습니다. 삭제 범위는 출시 전 개선·검증하고 최종 문안에 반영할 예정입니다.</p>
-  <h2>8. 정보 보호</h2>
-  <p>주요 데이터는 Android 앱 내부 저장소에 보관됩니다. 앱 데이터베이스와 수동 백업 파일에 앱 차원의 별도 암호화가 적용되어 있다고 보장하지 않습니다.</p>
-  <h2>9. 문의 및 방침 변경</h2>
-  <p>개인정보 관련 문의는 <a href="mailto:yudae.studio@gmail.com">yudae.studio@gmail.com</a>으로 보내실 수 있습니다. 방침 변경 시 공개 페이지에 변경 내용과 시행일을 안내합니다.</p>
-  <footer>© yudae studio · 모아지갑</footer>
-</main></body></html>
+<body>
+  <main>
+    <h1>모아지갑 개인정보처리방침</h1>
+    <p><strong>운영자:</strong> yudae studio<br>
+      <strong>문의 이메일:</strong> <a href="mailto:yudae.studio@gmail.com">yudae.studio@gmail.com</a><br>
+      <strong>시행일:</strong> 2026년 10월 29일</p>
+
+    <p>모아지갑(이하 '앱')은 쿠폰과 유효기간이 있는 중요한 정보를 관리하는 Android 애플리케이션입니다.</p>
+    <p>운영자는 이용자의 개인정보를 보호하고, 앱에서 처리하는 정보와 이용자의 권리를 안내하기 위해 본 개인정보처리방침을 공개합니다.</p>
+
+    <h2>1. 처리하는 정보 및 목적</h2>
+    <p>앱은 쿠폰 등록·관리, 이미지 분석, 유효기간 알림 및 이용자가 선택한 부가 기능을 제공하기 위해 다음 정보를 처리합니다.</p>
+    <ul>
+      <li>쿠폰 내용, 쿠폰번호, 바코드·QR 정보, 유효기간 및 사용 상태</li>
+      <li>이용자가 선택하거나 공유한 이미지와 이미지 분석 결과</li>
+      <li>이용자가 별도로 알림 접근 권한을 허용한 경우, 지원되는 메시지 앱의 알림 제목·본문 및 이미지 관련 정보</li>
+      <li>이용자가 캘린더 등록을 선택한 경우, 일정 생성에 필요한 쿠폰 내용과 날짜</li>
+    </ul>
+    <p>앱은 별도의 회원가입이나 로그인 기능을 제공하지 않습니다.</p>
+
+    <h2>2. 기기 내 저장 및 이미지 분석</h2>
+    <p>쿠폰 정보와 등록 이미지는 기본적으로 이용자의 기기 내부 앱 저장소에 보관됩니다.</p>
+    <p>이미지의 문자·바코드·QR 인식에는 Google ML Kit를 사용합니다. 분석 대상 이미지와 인식 결과는 기기에서 처리됩니다.</p>
+    <p>다만 Google ML Kit는 SDK 운영, 진단 및 분석을 위해 기기·앱 정보, 설치 식별자, 성능·오류 및 기능 사용 관련 정보를 Google에 전송할 수 있습니다.</p>
+    <p>이미지 공유 과정에서 생성된 복사본은 앱 내부 저장소에, 이미지 분석 과정의 전처리 파일은 캐시 영역에 임시 저장될 수 있습니다. 앱은 사용이 끝난 임시 파일을 정리하는 기능을 제공하지만, 비정상 종료나 파일 삭제 실패 등 예외 상황에서는 일부 파일이 일시적으로 남을 수 있습니다.</p>
+
+    <h2>3. 알림 접근 서비스</h2>
+    <p>이용자가 Android 설정에서 알림 접근 권한을 직접 허용하면 앱은 카카오톡, 삼성 메시지 및 Google 메시지의 알림 제목·본문과 이미지 관련 정보를 읽을 수 있습니다.</p>
+    <p>이 기능은 쿠폰과 관련된 정보를 확인하고 등록을 돕기 위한 기능입니다.</p>
+    <p>지원 메시지 앱에서 수신한 알림 중 쿠폰과 관련 없는 정보도 최신 알림 후보 기록에 포함될 수 있으며, 해당 기록은 기기 내부에 저장될 수 있습니다.</p>
+    <p>앱은 관련 기록을 정리하는 기능을 제공하며, 이용자는 Android 설정에서 언제든 알림 접근 권한을 철회할 수 있습니다.</p>
+    <p>확인된 현재 소스에서는 알림 제목이나 본문 자체를 진단 로그에 출력하지 않고, 고정 진단 문구와 오류 유형 등을 기록합니다.</p>
+
+    <h2>4. 유효기간 알림</h2>
+    <p>앱은 이용자가 등록한 유효기간을 기준으로 만료 예정 알림을 예약할 수 있습니다.</p>
+    <p>알림 권한을 허용하지 않았거나 기기의 절전 설정 및 Android 운영체제 정책에 따라 알림이 지연되거나 표시되지 않을 수 있습니다.</p>
+    <p>쿠폰 정보 변경, 사용 완료, 삭제 및 백업 복원 과정에서는 관련 예약 알림의 취소 또는 재예약을 처리합니다.</p>
+
+    <h2>5. 백업 및 복원</h2>
+    <p>이용자가 수동 백업을 실행하면 쿠폰 정보와 등록 이미지가 포함된 JSON 백업 파일을 생성할 수 있습니다. 이미지는 Base64 형식으로 포함되며, Base64 인코딩은 암호화가 아닙니다.</p>
+    <p>백업 파일은 이용자가 선택한 위치에 저장됩니다. 클라우드 저장 위치를 선택하면 해당 서비스의 데이터 처리 및 보관 정책이 적용될 수 있습니다.</p>
+    <p>앱 자체에서 수동 JSON 백업 파일을 별도로 암호화하지 않으므로, 이용자는 백업 파일의 보관 및 공유에 주의해야 합니다.</p>
+    <p>앱은 Android 자동 백업을 비활성화하도록 설정되어 있으며, 기존 수동 JSON 백업·복원 기능은 유지합니다.</p>
+
+    <h2>6. 캘린더 연동</h2>
+    <p>이용자가 직접 캘린더 일정 추가를 선택하고 필요한 권한을 허용하면 쿠폰 내용과 유효기간을 Android 캘린더에 기록할 수 있습니다.</p>
+    <p>캘린더 계정의 동기화 설정에 따라 해당 정보가 외부 캘린더 서비스에 저장될 수 있습니다.</p>
+    <p>개별 쿠폰 삭제 시 연결된 일정의 삭제를 시도하지만, 앱의 전체 데이터 삭제 기능이 외부 캘린더에 이미 등록된 모든 일정을 삭제하는 것은 아닙니다.</p>
+
+    <h2>7. 정보의 보관 및 삭제</h2>
+    <p>등록된 쿠폰과 이미지는 이용자가 삭제할 때까지 기기 내부에 보관될 수 있습니다.</p>
+    <p>이용자가 앱의 전체 데이터 삭제 기능을 실행하면 앱은 쿠폰 데이터베이스, 등록 이미지, 공유 관련 파일 및 최신 알림 기록을 정리하고 예약 알림 취소를 시도합니다.</p>
+    <p>삭제 과정에서 일부 작업이 실패하면 앱은 이용자에게 실패 사실을 안내하도록 구현되어 있습니다.</p>
+    <p>다만 다음 정보는 앱의 전체 데이터 삭제와 별도로 관리됩니다.</p>
+    <ul>
+      <li>이용자가 외부 저장 위치에 내보낸 JSON 백업 파일</li>
+      <li>Android 캘린더 또는 연결된 캘린더 서비스에 등록된 외부 일정</li>
+    </ul>
+    <p>이용자는 해당 저장 위치나 서비스에서 별도로 삭제해야 할 수 있습니다.</p>
+
+    <h2>8. 정보 보호</h2>
+    <p>앱은 주요 쿠폰 데이터와 이미지를 Android 앱 내부 저장소에 보관하며, 불필요한 임시 파일을 정리하는 기능을 제공합니다.</p>
+    <p>앱 데이터베이스와 수동 JSON 백업 파일에 앱 자체의 별도 저장 암호화가 적용되어 있다고 보장하지 않습니다.</p>
+    <p>외부 SDK가 전송하는 진단·사용 정보는 해당 SDK의 데이터 처리 및 보안 정책에 따릅니다.</p>
+
+    <h2>9. 문의 및 방침 변경</h2>
+    <p>개인정보 처리와 관련된 문의는 아래 연락처로 보내실 수 있습니다.</p>
+    <ul>
+      <li>운영자: yudae studio</li>
+      <li>이메일: <a href="mailto:yudae.studio@gmail.com">yudae.studio@gmail.com</a></li>
+    </ul>
+    <p>개인정보처리방침이 변경되는 경우 변경 내용과 시행일을 공개 페이지를 통해 안내합니다.</p>
+
+    <footer>© yudae studio · 모아지갑</footer>
+  </main>
+</body>
+</html>
